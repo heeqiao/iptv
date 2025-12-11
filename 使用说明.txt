@@ -1,0 +1,93 @@
+IPTV播放器使用说明
+===================
+
+项目概述
+--------
+这是一个功能完整的安卓IPTV直播播放应用，支持多种视频流格式播放。
+
+主要功能
+--------
+1. 直播播放 - 支持RTMP、HTTP、HLS等多种视频流格式
+2. 频道管理 - 频道列表展示、分组管理
+3. 收藏功能 - 支持收藏喜欢的频道
+4. 搜索功能 - 快速搜索频道名称和分组
+5. 界面美观 - Material Design风格界面
+6. 画中画 - 支持Android 7.0+的画中画模式
+7. 横屏播放 - 自动横屏全屏播放
+
+开发环境要求
+------------
+- Android Studio Arctic Fox 或更高版本
+- Android SDK API 21+
+- Java 8+
+- Android 5.0 (API 21) 或更高版本的设备
+
+安装和运行步骤
+--------------
+1. 打开Android Studio
+2. 点击 "Open" 或 "打开"
+3. 选择 "C:\Users\HE\Desktop\IPTVPlayer" 文件夹
+4. 等待Gradle同步完成（可能需要几分钟）
+5. 连接Android设备或启动模拟器
+6. 点击绿色的运行按钮编译安装
+
+如何添加频道源
+--------------
+编辑文件：app\src\main\java\com\example\iptvplayer\utils\ChannelManager.java
+
+找到 getDefaultChannels() 方法，替换示例直播源地址：
+
+```java
+// 示例：添加一个真实的直播源
+channels.add(new Channel("cctv1", "CCTV-1", "https://example.com/live/cctv1.m3u8", "https://example.com/logo/cctv1.png", "央视"));
+```
+
+支持的直播源格式：
+- HLS: https://example.com/stream.m3u8
+- RTMP: rtmp://example.com/live/stream  
+- HTTP: http://example.com/stream.ts
+
+注意事项
+--------
+1. 需要配置真实的直播源地址才能正常播放
+2. 应用图标需要替换为真实的PNG文件
+3. 播放质量取决于网络状况和设备性能
+4. 请确保使用的直播源有合法版权
+
+常见问题
+--------
+Q: 编译时出现错误怎么办？
+A: 确保Android Studio已安装最新的SDK和构建工具
+
+Q: 视频无法播放？
+A: 检查网络连接和直播源地址是否正确
+
+Q: 如何调试播放问题？
+A: 查看Android Studio的Logcat日志
+
+文件结构说明
+------------
+- MainActivity.java: 主界面，显示频道列表
+- PlayerActivity.java: 播放界面
+- Channel.java: 频道数据模型
+- ChannelAdapter.java: 频道列表适配器
+- ChannelManager.java: 频道数据管理
+- layout/: 界面布局文件
+- drawable/: 图标和背景资源
+- values/: 字符串和颜色资源
+
+技术支持
+--------
+如遇到问题，可以：
+1. 查看Android Studio的编译错误信息
+2. 检查Logcat中的运行时错误
+3. 确认所有依赖库正确安装
+
+更新记录
+--------
+版本 1.0 - 初始版本
+- 基本播放功能
+- 频道列表管理
+- 收藏功能
+- 搜索功能
+- 画中画支持

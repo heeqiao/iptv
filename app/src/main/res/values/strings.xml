@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">IPTV播放器</string>
+    <string name="all_channels">全部频道</string>
+    <string name="favorite_channels">收藏频道</string>
+    <string name="search_hint">搜索频道...</string>
+    <string name="no_channels_found">未找到频道</string>
+    <string name="added_to_favorites">已添加到收藏</string>
+    <string name="removed_from_favorites">已取消收藏</string>
+    <string name="play_failed">播放失败</string>
+    <string name="loading">加载中...</string>
+    <string name="refresh">刷新</string>
+    <string name="settings">设置</string>
+    <string name="live_stream">直播</string>
+</resources>
